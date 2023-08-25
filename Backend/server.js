@@ -1,29 +1,29 @@
-// Package Imports
-const express = require("express");
-const dotenv = require("dotenv");
-const colors = require("colors");
-const cors = require("cors");
-const morgan = require("morgan");
-const { connectDB } = require("./config/db");
+const express = require('express');
+const colors = require('colors');
+const morgan = require('morgan');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const connectDB = require('./config/db');
 
-// DOTENV Config
+// dotenv config
 dotenv.config();
 
-// MongoDB Connection
+// mongodb connection
 connectDB();
 
-// Rest Objects
+// rest object
 const app = express();
 
-// Middlewares
-app.use(express.json());
+// middlewares
 app.use(cors());
-app.use(morgan("dev"));
+app.use(express.json());
+app.use(morgan('dev'));
 
-// Port
-const PORT = process.env.PORT || 8080;
+// routes
+app.use('/api/v1/user', require('./routes/userRoutes'));
 
-// Listen
-app.listen(PORT, (req,res) => {
-    console.log(`Node Server Running In ${process.env.DEV_MODE} Mode on port no ${PORT}`.bgCyan.white);
+// listen port
+const port = process.env.PORT || 8080;
+app.listen(port, (req,res) => {
+    console.log(`Server is running in ${process.env.NODE_MODE} Mode on port ${port}.`.bgCyan.white);
 });
