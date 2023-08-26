@@ -1,17 +1,22 @@
 import React from 'react';
 import "../styles/RegisterStyles.css";
 import { Form, Input, message } from 'antd';
+import { useDispatch } from 'react-redux';
+import { showLoading, hideLoading } from '../redux/features/alertSlice';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
 
   const navigate = useNavigate();
+  const dispath = useDispatch();
 
   // Form Handler
   const onfinishHandler = async (values) => {
     try {
-      const res = await axios.post('http://localhost:8080/api/v1/user/register', values);
+      dispath(showLoading());
+      const res = await axios.post('/api/v1/user/register', values);
+      dispath(hideLoading());
       if (res.data.success) {
         message.success('Register Successfully!');
         navigate('/login');
@@ -19,6 +24,7 @@ const RegisterPage = () => {
         message.error(res.data.message);
       };
     } catch (error) {
+      dispath(hideLoading());
       console.log(error);
       message.error('Something went wrong');
     };
