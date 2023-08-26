@@ -2,6 +2,7 @@ import React, { useEffect, useCallback, useState } from "react";
 import ReactPlayer from "react-player";
 import peer from "../service/peer";
 import { useSocket } from "../context/SocketProvider";
+import '../styles/RoomPageStyles.css'; // Import your custom styles
 
 const RoomPage = () => {
   const socket = useSocket();
@@ -110,34 +111,44 @@ const RoomPage = () => {
   ]);
 
   return (
-    <div>
-      <h1>Room Page</h1>
-      <h4>{remoteSocketId ? "Connected" : "No one in room"}</h4>
-      {myStream && <button onClick={sendStreams}>Send Stream</button>}
-      {remoteSocketId && <button onClick={handleCallUser}>CALL</button>}
+    <div className="room-container">
+      <h1 className="room-title">Room Page</h1>
+      <h4 className="connection-status">
+        {remoteSocketId ? "Connected" : "No one in room"}
+      </h4>
       {myStream && (
-        <>
-          <h1>My Stream</h1>
+        <button className="action-button" onClick={sendStreams}>
+          Send Stream
+        </button>
+      )}
+      {remoteSocketId && (
+        <button className="action-button" onClick={handleCallUser}>
+          CALL
+        </button>
+      )}
+      {myStream && (
+        <div className="stream-container">
+          <h1 className="stream-title">My Stream</h1>
           <ReactPlayer
             playing
             muted
-            height="100px"
-            width="200px"
+            height="300px" // Increase the height
+            width="500px"  // Increase the width
             url={myStream}
           />
-        </>
+        </div>
       )}
       {remoteStream && (
-        <>
-          <h1>Remote Stream</h1>
+        <div className="stream-container">
+          <h1 className="stream-title">Remote Stream</h1>
           <ReactPlayer
             playing
             muted
-            height="100px"
-            width="200px"
+            height="300px" // Increase the height
+            width="500px"  // Increase the width
             url={remoteStream}
           />
-        </>
+        </div>
       )}
     </div>
   );

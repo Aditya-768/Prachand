@@ -33,8 +33,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <div className='form-container'>
+    <div className='register-page-container'>
+      <div className='register-form-container'>
         <Form layout="vertical" onFinish={onfinishHandler} className='register-form'>
           <h3 className='text-center'>Login Form</h3>
           <Form.Item label="Email" name="email" >
@@ -43,8 +43,8 @@ const Login = () => {
           <Form.Item label="Password" name="password" >
             <Input type='password' required />
           </Form.Item>
-          <Link to="/register" className="m-2">Not a user? Register Here</Link>
-          <button className='btn btn-primary' type='submit'>Login</button>
+          <Link to="/register" className="login-link">Not a user? Register Here</Link>
+          <button className='btn btn-primary register-button' type='submit'>Login</button>
         </Form>
       </div>
     </div>

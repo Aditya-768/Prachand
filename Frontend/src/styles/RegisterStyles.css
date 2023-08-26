@@ -1,11 +1,31 @@
-.form-container {
+.register-page-container {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
-}
+    background: url('https://img.freepik.com/free-photo/organized-desk-with-copy-space_23-2148219270.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .register-form {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
-.register-form {
-    border: 1px solid grey;
-    padding: 30px;
-}
+  .text-center {
+    text-align: center;
+  }
+  
+  .login-link {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .register-button {
+    width: 100%;
+  }
+  
