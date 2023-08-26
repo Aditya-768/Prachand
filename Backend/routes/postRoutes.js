@@ -1,17 +1,11 @@
-const express = require("express");
-const {
-  getAllPostsController,
-  createPostController
-} = require("../controllers/postController");
-
-//router object
+// routes.js
+const express = require('express');
 const router = express.Router();
+const postController = require('../controllers/postController');
 
-//routes
-// GET || all posts
-router.get("/all-posts", getAllPostsController);
+// Create a new post
+router.post('/create-post', postController.createPost);
 
-//POST || create post
-router.post("/create-post", createPostController);
+router.get('/get-posts', postController.getAllPosts);
 
 module.exports = router;

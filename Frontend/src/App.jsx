@@ -11,6 +11,7 @@ import EditProfile from "./pages/EditProfile";
 import CreatePost from "./pages/CreatePost";
 import LobbyScreen from "./screens/Lobby";
 import RoomPage from "./screens/Room";
+import PostsPage from "./pages/PostsPage";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
             <Route path="/videoconferencing" element={<LobbyScreen />} />
             <Route path="/room/:roomId" element={<RoomPage />} />
+            <Route path="/getPosts" element={<PostsPage />} />
           </Routes>
         )}
       </BrowserRouter>
