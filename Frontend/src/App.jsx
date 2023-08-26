@@ -23,7 +23,7 @@ function App() {
           <Spinner />
         ) : (
           <Routes>
-            <Route path="/" element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
             <Route path="/editProfile" element={<ProtectedRoute><EditProfile /></ProtectedRoute>} />
             <Route path="/createPost" element={<ProtectedRoute><CreatePost /></ProtectedRoute>} />
