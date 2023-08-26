@@ -9,6 +9,8 @@ import PublicRoute from "./components/PublicRoute";
 import ProfilePage from "./pages/ProfilePage";
 import EditProfile from "./pages/EditProfile";
 import CreatePost from "./pages/CreatePost";
+import LobbyScreen from "./screens/Lobby";
+import RoomPage from "./screens/Room";
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
             <Route path="/createPost" element={<ProtectedRoute><CreatePost /></ProtectedRoute>} />
             <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
             <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
+            <Route path="/videoconferencing" element={<LobbyScreen />} />
+            <Route path="/room/:roomId" element={<RoomPage />} />
           </Routes>
         )}
       </BrowserRouter>
