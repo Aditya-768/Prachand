@@ -1,17 +1,24 @@
-Team Name - Prachand
+Team Name: Prachand 🚀
 
-Problem Statement - To develop a platform for collaboration between students and teachers, so that high quality material can be developed. They can create educational posts, and it can be viewed by everybody.
+Problem Statement: To develop a platform for collaboration between students and teachers, so that high-quality educational material can be developed. They can create educational posts, and it can be viewed by everybody. 📚👨‍🏫👩‍🎓
 
-Team Members 
+Features Implemented:
 
-1. Aditya Mane (Team Leader)
-Skills - HTML, CSS, Javascript, React JS
+Authentication 🔐 - Login, Signup
+HomePage 🏠
+Profile Page 🧑‍💼 - View, Edit
+Posts 📝 - Creation and Viewing
+Video Conferencing 🎥📞
+Team Members:
 
-2. Shaan Agarwal
-Skills - HTML, CSS, Javascript, React JS, Node JS, Express JS, MongoDB
+Aditya Mane (Team Leader)
+Skills: HTML, CSS, Javascript, React JS 💻🎨📜
 
-3. Darshana Chothave
-Skills - HTML, CSS, React JS
+Shaan Agarwal
+Skills: HTML, CSS, Javascript, React JS, Node JS, Express JS, MongoDB 🌐📊🔍📁
 
-4. Pooja Patil
-Skills - HTML, CSS, Javascript, React JS
+Darshana Chothave
+Skills: HTML, CSS, React JS 💻🎨📜
+
+Pooja Patil
+Skills: HTML, CSS, Javascript, React JS 💻🎨📜
